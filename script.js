@@ -1,0 +1,3 @@
+document.querySelector(".menu")?.addEventListener("click",()=>{const n=document.querySelector("nav");n.style.display=n.style.display==="flex"?"none":"flex";n.style.position="absolute";n.style.right="7vw";n.style.top="70px";n.style.flexDirection="column";n.style.padding="20px";n.style.background="#f8f3ea";});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.animate([{opacity:0,transform:"translateY(22px)"},{opacity:1,transform:"translateY(0)"}],{duration:700,fill:"forwards",easing:"ease-out"});io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll(".service-grid article,.tile,.stats div,.contact-card a").forEach(x=>io.observe(x));
